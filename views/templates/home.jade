@@ -1,3 +1,8 @@
 div(ng-controller="HomeCtrl")
   p this is home.jade {{ name }}
 
+  ul  
+    li(ng-repeat="user in users") {{user.age}}
+      p {{user.name}}
+
+      

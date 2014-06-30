@@ -13,6 +13,6 @@
     "commit": "a1d5fce50770e33eaaeb97435e3ae81bb53b779d"
   },
   "_source": "git://github.com/angular/bower-angular-loader.git",
-  "_target": "1.2.x",
+  "_target": "~1.2.x",
   "_originalSource": "angular-loader"
 }

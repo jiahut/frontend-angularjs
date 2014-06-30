@@ -1,5 +1,5 @@
 define ['application'], (app) ->
-  console.log app
-  app.controller 'HomeCtrl', ['$scope', ($scope) ->
+  app.controller 'HomeCtrl', ['$scope', 'UserFactory', ($scope, UserFactory) ->
     $scope.name = "jazz..."
+    $scope.users = UserFactory.query()
   ]

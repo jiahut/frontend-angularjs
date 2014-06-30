@@ -5,9 +5,10 @@
 
 # for more info on require config, see http://requirejs.org/docs/api.html#config
 
-define ["angular","routes","services/resolver","ngRoute"], (angular,routes, resolver)->
+define ["angular","routes","services/resolver","ngRoute","ngResource"], (angular,routes, resolver)->
   app = angular.module "app", [
     "ngRoute"
+    "ngResource"
     ]
   app.config ["$routeProvider", '$locationProvider','$controllerProvider',
     "$compileProvider","$filterProvider", "$provide",
