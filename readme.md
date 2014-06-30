@@ -1,10 +1,15 @@
-Your Project Name
+fontend 
 =================
-A brief summary of your project
+
+1. dynamic loading resources with angularjs
+2. modularized with requirejs 
+3. dependence manage with bower 
+3. coding with coffee\roots\nodejs
+
 
 ### Setup / Installation
-Some instructions on how to set up and/or install this project
 
-### Staging/Production
-This site is staged at http://example.com [u: admin p: example]    
-This site is live at http://example.com
+    > git clone https://github.com/jiahut/fontend-angularjs.git
+    > npm install roots -g
+    > bower install
+    > roots watch
