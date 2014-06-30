@@ -1,16 +1,19 @@
 !!!
-html
+html(lang="zh-CN")
   head
     meta(charset='utf8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
     meta(name='description', content='description of your site')
     meta(name='author', content= "author of the site")
+    base(href="/") 
 
     title= title
     
     link(rel='stylesheet', href='css/master.css')
   body
-    != content
+    block body
 
-    //- add other scripts through require.js, not here
-    script(data-main="js/main", src="js/require.js")
+    // script(src="//code.jquery.com/jquery-2.1.1.min.js")
+    script(data-main="js/main" src="bower_components/requirejs/require.js")
+    // script(src='https://jspm.io/system@0.6.js')
+    // script(src='js/config.js')

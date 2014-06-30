@@ -1,12 +1,29 @@
-#= require "_helper"
-
-# requirejs makes life a lot easier when dealing with more than one
-# javascript file and any sort of dependencies, and loads faster.
-
-# for more info on require config, see http://requirejs.org/docs/api.html#config
 require.config
   paths:
-    jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min'
+    'angular' : '/bower_components/angular/angular'
+    'ngResource': '/bower_components/angular-resource/angular-resource'
+    'ngCookies': '/bower_components/angular-cookies/angular-cookies'
+    'ngProgressLite': '/bower_components/ngprogress-lite/ngprogress-lite'
+    'ngRoute': '/bower_components/angular-route/angular-route'
+  shim:
+    ngResource:
+      deps: ['angular']
+      exports: 'angular'
+    ngCookies:
+      deps: ['angular'],
+      exports: 'angular'
+    ngProgress:
+      deps: ['angular']
+      exports: 'angular'
+    ngRoute:
+      deps: ['angular']
+      exports: 'angular'
+    angular:
+      exports : 'angular'
+  baseUrl: '/js'
 
-require ['jquery'], ($) ->
-  console.log 'jquery loaded (via assets/js/main.coffee)'
+deps =  ["application"]
+# deps.push "controllers/controllers"
+# deps.push "controllers/phonelist"
+requirejs deps, ()->
+  angular.bootstrap document, ["app"]
