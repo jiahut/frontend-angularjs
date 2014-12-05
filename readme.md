@@ -12,4 +12,5 @@ fontend
     > git clone https://github.com/jiahut/fontend-angularjs.git
     > npm install roots -g
     > bower install
+    > cd assets/bower_components/bootstrap/ && rm -rf less
     > roots watch
